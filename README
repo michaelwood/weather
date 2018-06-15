@@ -1,0 +1,5 @@
+Weather station logger and output
+
+The intended setup is for the logger (wmlog.c) to be on a low power device (e.g a raspberrypi) which then sends the binary data dump to a web server (you can call it the cloud if you like). This then processes it (orchestrated by create-graphs.sh on a cron job) into a csv file and current-readings.html (wmlog-parser.c) the csv is read by rrd tool to make graphs. It also runs the weather alert script.
+
+Tested with libusb 0.1.12, glib-2 2.40.0
